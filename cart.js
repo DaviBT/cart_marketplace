@@ -51,6 +51,23 @@ function renderCartItem(){
         </div>
       </td>
       <td>R$ ${product.price.toFixed(2)}</td>
+       <td>
+          <div class="quantity">
+          <button onclick="decreaseQuantity(${product.id})">
+              <i class="bx bx-minus"></i>
+          </button>
+          <span>${product.quantity}</span>
+          <button onclick="increaseQuantity(${product.id})">
+              <i class="bx bx-plus"></i>
+          </button>
+          </div>
+      </td>
+      
+      <td>
+        <button class="remove" onclick="removeProduct(${product.id})">
+          <i class="bx bx-x"></i>
+        </button>
+      </td>
     `;
 
     cartItemsSection.appendChild(row);
