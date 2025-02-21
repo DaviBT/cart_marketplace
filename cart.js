@@ -28,7 +28,7 @@ const products =[
 ]
 
 
-function renderCartItem(){
+function renderCartItems(){
     const cartItemsSection = document.getElementById('cart-items')
 
     cartItemsSection.innerHTML = ''
@@ -56,7 +56,7 @@ function renderCartItem(){
           <button onclick="decreaseQuantity(${product.id})">
               <i class="bx bx-minus"></i>
           </button>
-          <span>${product.quantity}</span>
+          <span>${product.quantidy}</span>
           <button onclick="increaseQuantity(${product.id})">
               <i class="bx bx-plus"></i>
           </button>
