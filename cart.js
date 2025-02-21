@@ -38,6 +38,15 @@ function decreaseQuantity(productId){
   }
 }
 
+function increaseQuantity(productId){
+  const product = products.find(i => i.id == productId);
+
+  if (product) {
+    product.quantidy++;
+    renderCartItems();
+  }
+}
+
 
 function renderCartItems(){
     const cartItemsSection = document.getElementById('cart-items')
