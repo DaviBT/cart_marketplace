@@ -27,11 +27,15 @@ const products =[
 
 ]
 
-function decreaseQuantity(product){
-  if (product.quantidy > 0){
-    product.quantidy--
+function decreaseQuantity(productId){
+  const product = products.find(i => i.id == productId);
+
+  if(product.quantidy == 1){
+    window.alert("Não é possível diminuir a quantidade do produto para 0.")
+  } else if (product) {
+    product.quantidy--;
+    renderCartItems();
   }
-  renderCartItems()
 }
 
 
@@ -81,7 +85,7 @@ function renderCartItems(){
       <td>R$ ${product.price.toFixed(2)}</td>
        <td>
           <div class="quantity">
-          <button onclick="decreaseQuantity(${product.quantidy})">
+          <button onclick="decreaseQuantity(${product.id})">
               <i class="bx bx-minus"></i>
           </button>
           <span>${product.quantidy}</span>
@@ -99,6 +103,9 @@ function renderCartItems(){
         </button>
       </td>
     `;
+    
+
+
     let totalPrice = subtotal + fretePrice
 
     cartItemsSection.appendChild(row);
