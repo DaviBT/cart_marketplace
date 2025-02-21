@@ -40,7 +40,8 @@ function renderCartItems(){
 
     const subtotalArea = document.getElementById('sub-total')
 
-
+    const freteArea = document.getElementById('frete')
+    let fretePrice = 0.00
 
     let subtotal = 0.00
 
@@ -50,6 +51,12 @@ function renderCartItems(){
         const itemTotal = product.price * product.quantidy
 
         subtotal += itemTotal
+
+        if(fretePrice == 0.00){
+          freteStatus = "Gratuito"
+        } else {
+          freteStatus = `R$ ${fretePrice.toFixed(2)}`
+        }
 
 
         const row = document.createElement('tr')
@@ -93,6 +100,7 @@ function renderCartItems(){
 
     cartItemsSection.appendChild(row);
     subtotalArea.innerHTML = `R$ ${subtotal.toFixed(2)}`;
+    freteArea.innerHTML = `${freteStatus}`
     })
 
 
