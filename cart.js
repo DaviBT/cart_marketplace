@@ -38,10 +38,18 @@ function decreaseQuantity(product){
 function renderCartItems(){
     const cartItemsSection = document.getElementById('cart-items')
 
+    const subtotalArea = document.getElementById('sub-total')
+
+
+
+    let subtotal = 0.00
+
     cartItemsSection.innerHTML = ''
     products.forEach(product => {
 
         const itemTotal = product.price * product.quantidy
+
+        subtotal += itemTotal
 
 
         const row = document.createElement('tr')
@@ -84,6 +92,7 @@ function renderCartItems(){
     `;
 
     cartItemsSection.appendChild(row);
+    subtotalArea.innerHTML = `R$ ${subtotal.toFixed(2)}`;
     })
 
 
