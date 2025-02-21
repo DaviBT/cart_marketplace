@@ -47,6 +47,13 @@ function increaseQuantity(productId){
   }
 }
 
+function removeProduct(productId){
+  const index = products.findIndex(i => i.id == productId);
+
+  products.splice(index, 1);
+  renderCartItems();
+}
+
 
 function renderCartItems(){
     const cartItemsSection = document.getElementById('cart-items')
