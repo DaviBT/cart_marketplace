@@ -33,6 +33,10 @@ function renderCartItems(){
 
     cartItemsSection.innerHTML = ''
     products.forEach(product => {
+
+        const itemTotal = product.price * product.quantidy
+
+
         const row = document.createElement('tr')
 
         row.innerHTML = `
@@ -62,7 +66,9 @@ function renderCartItems(){
           </button>
           </div>
       </td>
-      
+
+      <td>R$ ${itemTotal.toFixed(2)}</td>
+
       <td>
         <button class="remove" onclick="removeProduct(${product.id})">
           <i class="bx bx-x"></i>
@@ -72,6 +78,9 @@ function renderCartItems(){
 
     cartItemsSection.appendChild(row);
     })
+
+
+    const totalPrice = document
 }
 
 document.addEventListener('DOMContentLoaded', renderCartItems)
