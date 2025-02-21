@@ -21,7 +21,7 @@ const products =[
         name: 'Headset',
         category: "Periféricos",
         price: 350,
-        image: "./images/cadeira-gamer.jpg",
+        image: "./images/headset.jpg",
         quantidy: 8
     },
 
