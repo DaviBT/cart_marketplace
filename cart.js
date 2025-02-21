@@ -27,6 +27,13 @@ const products =[
 
 ]
 
+function decreaseQuantity(product){
+  if (product.quantidy > 0){
+    product.quantidy--
+  }
+  renderCartItems()
+}
+
 
 function renderCartItems(){
     const cartItemsSection = document.getElementById('cart-items')
@@ -57,7 +64,7 @@ function renderCartItems(){
       <td>R$ ${product.price.toFixed(2)}</td>
        <td>
           <div class="quantity">
-          <button onclick="decreaseQuantity(${product.id})">
+          <button onclick="decreaseQuantity(${product.quantidy})">
               <i class="bx bx-minus"></i>
           </button>
           <span>${product.quantidy}</span>
@@ -80,7 +87,6 @@ function renderCartItems(){
     })
 
 
-    const totalPrice = document
 }
 
 document.addEventListener('DOMContentLoaded', renderCartItems)
