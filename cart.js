@@ -43,6 +43,8 @@ function renderCartItems(){
     const freteArea = document.getElementById('frete')
     let fretePrice = 0.00
 
+    const totalPriceArea = document.getElementById('totalPrice')
+
     let subtotal = 0.00
 
     cartItemsSection.innerHTML = ''
@@ -97,10 +99,12 @@ function renderCartItems(){
         </button>
       </td>
     `;
+    let totalPrice = subtotal + fretePrice
 
     cartItemsSection.appendChild(row);
     subtotalArea.innerHTML = `R$ ${subtotal.toFixed(2)}`;
     freteArea.innerHTML = `${freteStatus}`
+    totalPriceArea.innerHTML = `R$ ${totalPrice.toFixed(2)}`
     })
 
 
