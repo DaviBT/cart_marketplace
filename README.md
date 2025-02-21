@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![SHARE](https://github.com/balta-io/3004/assets/965305/83e5350f-83c8-42f2-99ab-7cef6e4fc2ce)
 
 ## Introdução
@@ -23,3 +24,6 @@ Durante este curso, estaremos utilizando as seguintes ferramentas e tecnologias:
 * Um editor de código de sua preferência, como Visual Studio Code, Sublime Text ou Atom.
 * Um navegador web atualizado, como Google Chrome, Mozilla Firefox ou Microsoft Edge.
 * Acesso à internet para recursos adicionais e pesquisa.
+=======
+# cart_marketplace
+>>>>>>> 6e2cf9a55abaa1a8d1751353e61676283e69770c
